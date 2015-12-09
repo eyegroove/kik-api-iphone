@@ -228,7 +228,7 @@
 - (NSString *)appName
 {
     if (!_appName) {
-        _appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
+        _appName = [[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"];
     }
     
     return _appName;
